@@ -10,12 +10,56 @@
   </head>
   <body>
     <div id="mainHeader"></div>
-    <div id="main-container">d</div>
+    <div id="main-container">
+      <div class="rollingbanner">
+        <div class="wrap">
+          <div class="roller">
+            <ul>
+              <li class="kapi">
+                <img src="/img/test.jpg" alt="" />
+              </li>
+              <li class="kospi">
+                <img src="/img/test2.jpg" alt="" />
+              </li>
+              <li class="kapi">
+                <img src="/img/test.jpg" alt="" />
+              </li>
+              <li class="kospi">
+                <img src="/img/test2.jpg" alt="" />
+              </li>
+              <li class="kapi">
+                <img src="/img/test.jpg" alt="" />
+              </li>
+              <li class="kospi">
+                <img src="/img/test2.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script>
     $(document).ready(function () {
       $('#mainHeader').load('/header.html');
+    });
+
+    //DOM 생성 후
+    window.addEventListener('DOMContentLoaded', function () {
+      let roller = document.querySelector('.roller');
+      roller.id = 'roller1';
+
+      let clone = roller.cloneNode(true);
+      clone.id = 'roller2';
+      document.querySelector('.wrap').appendChild(clone);
+
+      document.querySelector('#roller1').style.left = '0px';
+      document.querySelector('#roller2').style.left =
+        document.querySelector('.roller ul').offsetWidth + 'px';
+
+      roller.classList.add('original');
+      clone.classList.add('clone');
     });
   </script>
 </html>

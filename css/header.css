@@ -19,32 +19,36 @@
   position: fixed;
   top: 0;
   right: 0;
-  background-color: red;
+  background-color: black;
   transform: translate(100%, 0);
 }
 
-@keyframes avatarHover {
+@keyframes openHamburger {
   0% {
     transform: translate(100%, 0);
+    background-color: black;
   }
   100% {
     transform: translate(0, 0);
+    background-color: #fff;
   }
 }
 
-@keyframes avatarHover1 {
+@keyframes closeHamburger {
   0% {
     transform: translate(0, 0);
+    background-color: #fff;
   }
   100% {
     transform: translate(100%, 0);
+    background-color: black;
   }
 }
 
-.hmco {
-  animation: avatarHover 0.3s forwards;
+.openH {
+  animation: openHamburger 0.3s forwards;
 }
 
-.hmcoo {
-  animation: avatarHover1 0.3s forwards;
+.closeH {
+  animation: closeHamburger 0.3s forwards;
 }
