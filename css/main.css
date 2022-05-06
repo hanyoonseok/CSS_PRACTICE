@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  box-sizing: border-box;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+span {
+  box-sizing: border-box;
+}
+
+a {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* main container */
+#main-container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
