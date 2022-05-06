@@ -36,6 +36,7 @@ ul {
   width: 100%;
   height: 100%;
   background-color: black;
+  padding: 0, 1rem;
 }
 
 /* 배너 컨테이너 */
@@ -116,4 +117,33 @@ ul {
   100% {
     transform: translateX(-200%);
   }
+}
+
+/* infinite scroll */
+#infinite-scroll-container {
+  padding-bottom: 100px;
+  height: 100%;
+}
+
+.infinite-scroll-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.infinite-scroll-item {
+  background-color: red;
+  width: 45%;
+  height: 400px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.sa-up {
+  transform: translate(0, 30px);
+}
+
+.infinite-scroll-item.show {
+  opacity: 1;
+  transform: none;
 }

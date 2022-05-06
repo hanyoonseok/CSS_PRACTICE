@@ -37,6 +37,41 @@
           </div>
         </div>
       </div>
+
+      <div id="infinite-scroll-container">
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">1</div>
+          <div class="infinite-scroll-item sa-up">1</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">2</div>
+          <div class="infinite-scroll-item sa-up">3</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">3</div>
+          <div class="infinite-scroll-item sa-up">3</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">4</div>
+          <div class="infinite-scroll-item sa-up">4</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">5</div>
+          <div class="infinite-scroll-item sa-up">5</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">6</div>
+          <div class="infinite-scroll-item sa-up">6</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">7</div>
+          <div class="infinite-scroll-item sa-up">7</div>
+        </section>
+        <section class="infinite-scroll-section">
+          <div class="infinite-scroll-item sa-up">8</div>
+          <div class="infinite-scroll-item sa-up">8</div>
+        </section>
+      </div>
     </div>
   </body>
 
@@ -45,7 +80,7 @@
       $('#mainHeader').load('/header.html');
     });
 
-    //DOM 생성 후
+    //무한 롤링 배너
     window.addEventListener('DOMContentLoaded', function () {
       let roller = document.querySelector('.roller');
       roller.id = 'roller1';
@@ -61,5 +96,22 @@
       roller.classList.add('original');
       clone.classList.add('clone');
     });
+
+    //무한 스크롤
+    const saTriggerMargin = 50;
+    const saElementList = document.querySelectorAll('.infinite-scroll-item');
+
+    const saFunc = function () {
+      for (const element of saElementList) {
+        if (!element.classList.contains('show')) {
+          if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+            element.classList.add('show');
+          }
+        }
+      }
+    };
+
+    window.addEventListener('load', saFunc);
+    window.addEventListener('scroll', saFunc);
   </script>
 </html>
