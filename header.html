@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/header.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
     <nav id="header-container">
       <img src="img/test.jpg" alt="" id="header-logo" />
-      <b id="hamburger" onclick="openHamburger()">ㅁ</b>
+      <form class="flexbox">
+        <input type="text" id="searchInput" placeholder="검색어를 입력해주세요." />
+        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <b id="hamburger" onclick="openHamburger()"><i class="fa-solid fa-bars"></i></b>
     </nav>
 
     <aside id="header-modal-container">

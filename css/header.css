@@ -3,14 +3,40 @@
   background-color: #fff;
   height: 80px;
   width: 100%;
-  padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 1px 0px 0 rgb(0 0 0 / 12%);
+}
+
+#header-container form {
+  min-width: 400px;
+  justify-content: center;
 }
 
 #header-logo {
-  height: 100%;
+  height: 60px;
+}
+
+#searchInput {
+  height: 40px;
+  width: 100%;
+  border: 2px #fdb814 solid;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#searchBtn {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px #fdb814 solid;
+  background-color: transparent;
+  color: #2a2925;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #header-modal-container {
@@ -22,27 +48,39 @@
   right: 0;
   background-color: black;
   transform: translate(100%, 0);
+  padding: 2rem 2rem;
+  background-color: #2a2925;
+}
+
+#hamburger {
+  font-size: 2rem;
+  color: #fdb814;
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
 }
 
 @keyframes openHamburger {
   0% {
     transform: translate(100%, 0);
-    background-color: black;
+    background-color: #fff;
   }
   100% {
-    transform: translate(0, 0);
-    background-color: #fff;
+    transform: translate(70%, 0);
+    background-color: #2a2925;
   }
 }
 
 @keyframes closeHamburger {
   0% {
-    transform: translate(0, 0);
-    background-color: #fff;
+    transform: translate(70%, 0);
+    background-color: #2a2925;
   }
   100% {
     transform: translate(100%, 0);
-    background-color: black;
+    background-color: #fff;
   }
 }
 
