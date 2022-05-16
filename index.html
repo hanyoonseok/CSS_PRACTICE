@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS PRACTICE</title>
     <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/global.css" type="text/css" />
 
-    <!-- font awesome -->
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- google font -->
@@ -93,41 +94,44 @@
 
   <script>
     $(document).ready(function () {
-      $('#mainHeader').load('/header.html');
+      $("#mainHeader").load("/header.html");
     });
 
     //무한 롤링 배너
-    window.addEventListener('DOMContentLoaded', function () {
-      let roller = document.querySelector('.roller');
-      roller.id = 'roller1';
+    window.addEventListener("DOMContentLoaded", function () {
+      let roller = document.querySelector(".roller");
+      roller.id = "roller1";
 
       let clone = roller.cloneNode(true);
-      clone.id = 'roller2';
-      document.querySelector('.wrap').appendChild(clone);
+      clone.id = "roller2";
+      document.querySelector(".wrap").appendChild(clone);
 
-      document.querySelector('#roller1').style.left = '0px';
-      document.querySelector('#roller2').style.left =
-        document.querySelector('.roller ul').offsetWidth + 'px';
+      document.querySelector("#roller1").style.left = "0px";
+      document.querySelector("#roller2").style.left =
+        document.querySelector(".roller ul").offsetWidth + "px";
 
-      roller.classList.add('original');
-      clone.classList.add('clone');
+      roller.classList.add("original");
+      clone.classList.add("clone");
     });
 
     //무한 스크롤
     const saTriggerMargin = 50;
-    const saElementList = document.querySelectorAll('.infinite-scroll-item');
+    const saElementList = document.querySelectorAll(".infinite-scroll-item");
 
     const saFunc = function () {
       for (const element of saElementList) {
-        if (!element.classList.contains('show')) {
-          if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
-            element.classList.add('show');
+        if (!element.classList.contains("show")) {
+          if (
+            window.innerHeight >
+            element.getBoundingClientRect().top + saTriggerMargin
+          ) {
+            element.classList.add("show");
           }
         }
       }
     };
 
-    window.addEventListener('load', saFunc);
-    window.addEventListener('scroll', saFunc);
+    window.addEventListener("load", saFunc);
+    window.addEventListener("scroll", saFunc);
   </script>
 </html>
