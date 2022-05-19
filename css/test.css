@@ -42,8 +42,8 @@ body {
 }
 
 .header-top-area img {
-  width: 80px;
-  height: 100px;
+  width: 60px;
+  height: 80px;
 }
 
 .header-bottom-area li {
@@ -75,7 +75,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index:10;
+  z-index: 10;
+}
+
+@keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+
+.ballon {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  color: white;
+  border-radius: 120px;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: motion 0.7s linear 0s infinite alternate;
+}
+
+.ballon:after {
+  border-top: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 120px;
+  left: 50px;
 }
 
 /* center area */
@@ -85,7 +118,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:0 15%;
+  padding: 0 15%;
 }
 
 .center-area {
@@ -124,7 +157,7 @@ body {
 
 .center-area-mid {
   font-size: 20px;
-  z-index:1;
+  z-index: 1;
 }
 
 .center-area-btn {
@@ -138,14 +171,14 @@ body {
   color: #292929;
 }
 
-.center-area-text{
+.center-area-text {
   margin-top: 20px;
   font-size: 24px;
-  color:#fff;
+  color: #fff;
 }
 
-.center-area-text b{
-  color:#fdb814;
+.center-area-text b {
+  color: #fdb814;
 }
 
 @keyframes btnHover {

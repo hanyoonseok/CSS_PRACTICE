@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -29,5 +30,89 @@
         </ul>
       </section>
     </header>
+
+    <div class="page-container">
+      <h1 class="page-title">매물 리스트</h1>
+      <h3 class="page-subtitle">매물을 한 눈에 보여줍니다.</h3>
+      <div class="vertical-center">
+        <span class="all-center imgCon"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></span>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="검색어를 입력해주세요."
+        />
+      </div>
+
+      <div class="list-item-container">
+        <div
+          class="list-item"
+          @mouseover="active=true"
+          @mouseleave="active=false"
+        >
+          <img src="./assets/back7.jpg" />
+          <p class="list-item-kinds" v-if="active">apartment</p>
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p v-if="!active"><i class="fa-solid fa-circle-plus"></i></p>
+          <div v-if="active" class="list-item-detail">
+            <p>주소 : 서울특별시 종로구 창신동 1</p>
+            <p>층 : 1층</p>
+            <p>거래 형태 : 경매</p>
+            <p>거래가 : 1억</p>
+          </div>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+        <div class="list-item">
+          <img src="./assets/back5.jpg" />
+          <p class="list-item-title">여기에 제목 들어감</p>
+          <p><i class="fa-solid fa-circle-plus"></i></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      new Vue({
+        el: ".page-container",
+        data() {
+          return {
+            active: false,
+          };
+        },
+        methods: {
+          mouseOver() {
+            //this.active = !this.active;
+          },
+        },
+      });
+    </script>
   </body>
 </html>

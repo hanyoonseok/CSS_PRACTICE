@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" type="text/css" />
+    <link rel="stylesheet" href="css/login.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <section class="header-top-area">
+        <ul>
+          <img src="./assets/logo.png" />
+          <li><i class="fa-solid fa-house-chimney"></i>Home</li>
+          <a href="./list.html"
+            ><li><i class="fa-solid fa-building"></i>Apartment</li></a
+          >
+          <li><i class="fa-solid fa-flag"></i>Notice</li>
+        </ul>
+      </section>
+      <section class="header-bottom-area">
+        <ul>
+          <li><i class="fa-solid fa-user"></i>Login</li>
+          <li><i class="fa-solid fa-pen-to-square"></i>Edit</li>
+        </ul>
+      </section>
+    </header>
+
+    <div class="page-container">
+      <form class="left-container all-center">
+        <h1>비밀번호 찾기</h1>
+        <input type="text" class="user-input" placeholder="아이디" required />
+        <input
+          type="password"
+          class="user-input"
+          placeholder="비밀번호"
+          required
+        />
+        <input
+          type="password"
+          class="user-input"
+          placeholder="새 비밀번호"
+          required
+        />
+        <p class="invisible-text">아이디 혹은 비밀번호가 일치하지 않습니다</p>
+        <button class="form-btn">비밀번호 찾기</button>
+
+        <span class="small-text-container">
+          <a class="small-text">회원가입 &nbsp;&nbsp;</a>
+          <a class="small-text">&nbsp;&nbsp;로그인</a>
+        </span>
+      </form>
+      <section class="right-container"></section>
+    </div>
+  </body>
+</html>

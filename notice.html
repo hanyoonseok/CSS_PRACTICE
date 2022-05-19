@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/notice.css" type="text/css" />
+    <link rel="stylesheet" href="css/global.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <section class="header-top-area">
+        <ul>
+          <img src="./assets/logo.png" />
+          <li><i class="fa-solid fa-house-chimney"></i>Home</li>
+          <a href="./list.html"
+            ><li><i class="fa-solid fa-building"></i>Apartment</li></a
+          >
+          <li><i class="fa-solid fa-flag"></i>Notice</li>
+          <li><i class="fa-solid fa-question"></i></i>QnA</li>
+        </ul>
+      </section>
+      <section class="header-bottom-area">
+        <ul>
+          <li><i class="fa-solid fa-user"></i>Login</li>
+          <li><i class="fa-solid fa-pen-to-square"></i>Edit</li>
+        </ul>
+      </section>
+    </header>
+
+    <div class="page-container">
+      <h1>공지사항</h1>
+      <div class="notice-list-container">
+        <div class="notice-item">
+          <div class="notice-item-intro">
+            <i class="fa-solid fa-angle-right notice-item-logo"></i>
+            <label class="notice-item-title vertical-center">공지제목</label>
+            <label class="notice-item-date vertical-center">2020-05-15</label>
+          </div>
+        </div>
+        <div class="notice-item">
+          <div class="notice-item-intro">
+            <i class="fa-solid fa-angle-down notice-item-logo"></i>
+            <label class="notice-item-title vertical-center">공지제목</label>
+            <label class="notice-item-date vertical-center">2020-05-15</label>
+          </div>
+
+          <p><b>운영자</b><br>
+            Services Library로 제공되는 주소 검색(주소로 좌표 얻기, Geocoding)의
+            검색 엔진 성능이 개선 되었습니다. 기존에는 입력한 주소에 건물명이
+            포함되면 결과를 잘 찾아주지 못하는 현상이 있었습니다. 이 점을
+            개선하고자 검색어 분석능력이 보다 향상된 검색 엔진을 적용하였습니다.
+            검색어에 내재된 중의적인 표현을 대응할 수 있으며 기존에 찾지 못했던
+            위치 정보를 결과에 포함시킬 수 있습니다. 결과적으로 기존에 매칭되지
+            않았던 유효한 결과들을 받아 볼 수 있게 됩니다. 자세한 변경 사항은
+            DevTalk 공지를 참고해주세요. REST API와 관련된 내용이지만
+            AddressSearch가 해당 API를 사용하고 있기 때문에 변경 내용은
+            동일합니다.
+          </p>
+        </div>
+        <div class="notice-item">
+          <div class="notice-item-intro">
+            <i class="fa-solid fa-angle-right notice-item-logo"></i>
+            <label class="notice-item-title vertical-center">공지제목</label>
+            <label class="notice-item-date vertical-center">2020-05-15</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

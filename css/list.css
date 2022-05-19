@@ -1,3 +1,12 @@
+.all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vertical-center {
+  display: flex;
+  align-items: center;
+}
 /* header */
 #main-header {
   position: fixed;
@@ -54,4 +63,150 @@
 }
 .center-area-btn:hover {
   animation: btnHover 0.3s forwards;
+}
+
+/* body */
+.page-container {
+  width: 100%;
+  height: 100%;
+  padding: 60px 60px;
+  padding-left: 150px;
+  background-color: #fff;
+}
+
+.page-title {
+  color: #292929;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.page-subtitle {
+  color: #292929;
+  font-size: 18px;
+}
+
+#search-input {
+  padding: 0.5rem;
+  border: 2px solid #fdb814;
+}
+
+.imgCon {
+  width: 35px;
+  height: 35px;
+  background-color: #fdb814;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top: 2px solid #fdb814;
+  border-left: 2px solid #fdb814;
+  border-bottom: 2px solid #fdb814;
+}
+
+/* list-item */
+
+.list-item-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  width: 480px;
+  height: 370px;
+  margin: 50px 0;
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes scale {
+  from {
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes goup {
+  from {
+    transform: translate(0, 20%);
+  }
+  to {
+    transform: translate(0, -20%);
+  }
+}
+@keyframes godown {
+  from {
+    transform: translate(0, -20%);
+  }
+  to {
+    transform: translate(0, 20%);
+  }
+}
+.list-item:hover {
+  animation: scale 0.3s forwards 0s;
+}
+
+.list-item p {
+  z-index: 2;
+}
+.list-item-detail {
+  z-index: 2;
+  font-weight: bold;
+  animation: show 0.3s forwards;
+  animation: goup 0.3s forwards;
+}
+
+.list-item-detail p {
+  line-height: 1.7;
+}
+
+.list-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 12px;
+}
+
+.list-item p i {
+  font-size: 24px;
+}
+
+.list-item-kinds {
+  line-height: 0;
+  color: gray;
+  animation: show 0.3s forwards;
+  animation: godown 0.3s forwards;
+}
+
+.list-item-title {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 41px;
+  margin: 0 0 20px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.list-item-kinds {
+  animation: show 0.2s forwards;
 }
